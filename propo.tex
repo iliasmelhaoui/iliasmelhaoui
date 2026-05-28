@@ -1,0 +1,226 @@
+\documentclass[12pt,a4paper]{article}
+
+\usepackage{fontspec}
+\setmainfont{Verdana}
+\usepackage[french]{babel}
+\usepackage{geometry}
+\usepackage{setspace}
+\usepackage{array}
+\usepackage{enumitem}
+\usepackage{amsmath}
+\usepackage{tikz}
+
+\geometry{margin=2cm}
+\onehalfspacing
+\pagestyle{empty}
+
+\setlength{\parindent}{0pt}
+\setlist[enumerate]{label=\textbf{\alph*.}, leftmargin=1.2cm}
+
+\newcommand{\tableauproportion}[4]{
+\begin{tikzpicture}[baseline={(current bounding box.center)}]
+    \draw (0,0) rectangle (2.4,1.4);
+    \draw (1.2,0) -- (1.2,1.4);
+    \draw (0,0.7) -- (2.4,0.7);
+
+    \node at (0.6,1.05) {#1};
+    \node at (1.8,1.05) {#2};
+    \node at (0.6,0.35) {#3};
+    \node at (1.8,0.35) {#4};
+
+    \draw[->, thick] (-0.35,1.1) to[out=200,in=160] (-0.35,0.3);
+    \node[draw, inner sep=3pt] at (-1.15,0.7) {$\times \ldots$};
+
+    \draw[->, thick] (2.75,0.3) to[out=-20,in=20] (2.75,1.1);
+    \node[draw, inner sep=3pt] at (3.55,0.7) {$\div \ldots$};
+\end{tikzpicture}
+}
+
+\newcommand{\Entete}[1]{
+\begin{center}
+    {\Large \textbf{Contrôle séquence 13}}\\
+    \textbf{Version #1}\\
+\vspace{1cm}
+    Calculatrice autorisée.
+
+    Chaque réponse doit être justifiée par un calcul.
+\end{center}
+}
+
+\newcommand{\ExercicePommes}[5]{
+\vspace{0.5cm}
+
+\underline{Exercice 1}
+
+Avec #1 kg de pommes, on peut faire #2 L de jus de pomme.
+
+\textbf{Recopier} et compléter le tableau de proportionnalité suivant.
+
+\vspace{0.3cm}
+
+\begin{center}
+\renewcommand{\arraystretch}{1.5}
+\begin{tabular}{|>{\raggedright\arraybackslash}m{5cm}|c|c|c|c|c|}
+\hline
+Masse de pommes en kg & #1 & & #4 & #5 & 1 \\
+\hline
+Volume de jus de pomme en L & & #3 & & & \\
+\hline
+\end{tabular}
+\end{center}
+}
+
+\newcommand{\ExerciceAmanda}[2]{
+\vspace{0.5cm}
+
+\underline{Exercice 2}
+
+Le véhicule d'Amanda consomme en moyenne #1 L sur un trajet de 100 km.
+
+Calculer la distance que peut espérer parcourir Amanda avec #2 L d'essence.
+}
+
+\newcommand{\ExerciceCoef}[8]{
+\vspace{0.5cm}
+
+\underline{Exercice 3}
+
+Les tableaux ci-dessous sont des tableaux de proportionnalité. \textbf{Recopie} les tableaux et donne le coefficient de proportionnalité à écrire à la place des pointillés.
+
+\vspace{0.5cm}
+
+\begin{center}
+\tableauproportion{#1}{#2}{#3}{#4}
+\qquad\qquad
+\tableauproportion{#5}{#6}{#7}{#8}
+\end{center}
+}
+
+\newcommand{\ExercicePieton}[4]{
+\vspace{0.5cm}
+
+\underline{Exercice 4}
+
+Un piéton marche à une allure régulière. Il parcourt #1 km en #2 min.
+
+\begin{enumerate}
+    \item Quelle distance, exprimée en km, parcourt-il en #3 minutes ?
+    \item Quel temps met-il à parcourir #4 km ?
+\end{enumerate}
+}
+
+\newcommand{\ExerciceYaourts}[4]{
+\vspace{6 cm}
+
+\underline{Exercice 5}
+
+On considère les prix suivants :
+
+\vspace{0.3cm}
+
+\begin{center}
+\renewcommand{\arraystretch}{1.5}
+\begin{tabular}{|>{\centering\arraybackslash}m{5cm}|>{\centering\arraybackslash}m{5cm}|}
+\hline
+\textbf{Nombre de yaourts} & \textbf{Prix} \\
+\hline
+#1 yaourts & $#2$ € \\
+\hline
+#3 yaourts & $#4$ € \\
+\hline
+\end{tabular}
+\end{center}
+
+\vspace{0.3cm}
+
+Le prix de ces yaourts est-il proportionnel au nombre de yaourts ? Expliquer pourquoi.
+}
+
+\newcommand{\ExerciceAthlete}[4]{
+\vspace{0.5cm}
+
+\underline{Exercice 6}
+
+Un athlète court le #1 m en #2 s et le #3 m en #4 secondes.
+
+La distance parcourue par cet athlète est-elle proportionnelle au temps de parcours ? Justifie ta réponse.
+}
+
+\newcommand{\VersionControle}[1]{
+\Entete{#1}
+}
+
+\begin{document}
+
+\VersionControle{1}
+\ExercicePommes{100}{60}{6}{20}{130}
+\ExerciceAmanda{5}{32}
+\ExerciceCoef{3}{5}{12}{20}{7}{56}{9}{72}
+\ExercicePieton{$5{,}1$}{60}{48}{7}
+\ExerciceYaourts{4}{1{,}20}{8}{2{,}40}
+\ExerciceAthlete{100}{10}{200}{22}
+\clearpage
+
+\VersionControle{2}
+\ExercicePommes{80}{48}{12}{30}{130}
+\ExerciceAmanda{10}{42}
+\ExerciceCoef{4}{6}{20}{30}{8}{64}{10}{80}
+\ExercicePieton{$4{,}8$}{50}{40}{$6{,}4$}
+\ExerciceYaourts{3}{0{,}90}{6}{1{,}80}
+\ExerciceAthlete{80}{8}{160}{18}
+\clearpage
+
+\VersionControle{3}
+\ExercicePommes{120}{72}{18}{40}{190}
+\ExerciceAmanda{2}{49}
+\ExerciceCoef{2}{7}{6}{21}{9}{45}{12}{60}
+\ExercicePieton{$6{,}3$}{70}{56}{$8{,}1$}
+\ExerciceYaourts{5}{1{,}75}{10}{3{,}50}
+\ExerciceAthlete{50}{5}{100}{11}
+\clearpage
+
+\VersionControle{4}
+\ExercicePommes{90}{54}{24}{50}{180}
+\ExerciceAmanda{20}{56}
+\ExerciceCoef{5}{8}{20}{32}{6}{54}{8}{72}
+\ExercicePieton{$5{,}6$}{80}{64}{$7{,}7$}
+\ExerciceYaourts{6}{2{,}10}{12}{4{,}20}
+\ExerciceAthlete{120}{12}{240}{27}
+\clearpage
+
+\VersionControle{5}
+\ExercicePommes{150}{90}{30}{60}{260}
+\ExerciceAmanda{5}{63}
+\ExerciceCoef{6}{9}{30}{45}{10}{50}{12}{60}
+\ExercicePieton{$4{,}5$}{45}{36}{$6{,}8$}
+\ExerciceYaourts{4}{1{,}40}{8}{2{,}80}
+\ExerciceAthlete{60}{6}{120}{13}
+\clearpage
+
+\VersionControle{6}
+\ExercicePommes{70}{42}{36}{80}{210}
+\ExerciceAmanda{10}{28}
+\ExerciceCoef{4}{7}{16}{28}{8}{40}{11}{55}
+\ExercicePieton{$6{,}6$}{55}{44}{$8{,}4$}
+\ExerciceYaourts{5}{2{,}25}{10}{4{,}50}
+\ExerciceAthlete{90}{9}{180}{20}
+\clearpage
+
+\VersionControle{7}
+\ExercicePommes{110}{66}{42}{90}{270}
+\ExerciceAmanda{2}{65}
+\ExerciceCoef{3}{8}{15}{40}{12}{48}{15}{60}
+\ExercicePieton{$5{,}4$}{75}{60}{$7{,}2$}
+\ExerciceYaourts{3}{1{,}05}{6}{2{,}10}
+\ExerciceAthlete{70}{7}{140}{16}
+\clearpage
+
+\VersionControle{8}
+\ExercicePommes{130}{78}{48}{100}{310}
+\ExerciceAmanda{50}{77}
+\ExerciceCoef{7}{9}{21}{27}{14}{42}{18}{54}
+\ExercicePieton{$7{,}2$}{90}{72}{$9{,}6$}
+\ExerciceYaourts{6}{2{,}40}{12}{4{,}80}
+\ExerciceAthlete{110}{11}{220}{25}
+
+\end{document}
