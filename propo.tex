@@ -62,9 +62,9 @@ Avec #1 kg de pommes, on peut faire #2 L de jus de pomme.
 \renewcommand{\arraystretch}{1.5}
 \begin{tabular}{|>{\raggedright\arraybackslash}m{5cm}|c|c|c|c|c|}
 \hline
-Masse de pommes en kg & #1 & & #4 & #5 & 1 \\
+Masse de pommes en kg & #1 & \fbox{#1/10} & #4 & #5 & 1 \\
 \hline
-Volume de jus de pomme en L & & #3 & & & \\
+Volume de jus de pomme en L & \fbox{#2/10} & #3 & \fbox{#3*2} & \fbox{\numexpr#1/10 + #2/10 + #3*2\relax} & \\
 \hline
 \end{tabular}
 \end{center}
@@ -155,7 +155,7 @@ La distance parcourue par cet athlète est-elle proportionnelle au temps de parc
 \VersionControle{1}
 \ExercicePommes{100}{60}{6}{20}{130}
 \ExerciceAmanda{5}{32}
-\ExerciceCoef{3}{5}{12}{20}{7}{56}{9}{72}
+\ExerciceCoef{3}{5}{12}{20}{7}{56}{9}{65}
 \ExercicePieton{$5{,}1$}{60}{48}{7}
 \ExerciceYaourts{4}{1{,}20}{8}{2{,}40}
 \ExerciceAthlete{100}{10}{200}{22}
@@ -164,7 +164,7 @@ La distance parcourue par cet athlète est-elle proportionnelle au temps de parc
 \VersionControle{2}
 \ExercicePommes{80}{48}{12}{30}{130}
 \ExerciceAmanda{10}{42}
-\ExerciceCoef{4}{6}{20}{30}{8}{64}{10}{80}
+\ExerciceCoef{4}{6}{20}{30}{8}{64}{10}{79}
 \ExercicePieton{$4{,}8$}{50}{40}{$6{,}4$}
 \ExerciceYaourts{3}{0{,}90}{6}{1{,}80}
 \ExerciceAthlete{80}{8}{160}{18}
@@ -173,7 +173,7 @@ La distance parcourue par cet athlète est-elle proportionnelle au temps de parc
 \VersionControle{3}
 \ExercicePommes{120}{72}{18}{40}{190}
 \ExerciceAmanda{2}{49}
-\ExerciceCoef{2}{7}{6}{21}{9}{45}{12}{60}
+\ExerciceCoef{2}{7}{6}{21}{9}{45}{12}{59}
 \ExercicePieton{$6{,}3$}{70}{56}{$8{,}1$}
 \ExerciceYaourts{5}{1{,}75}{10}{3{,}50}
 \ExerciceAthlete{50}{5}{100}{11}
@@ -182,7 +182,7 @@ La distance parcourue par cet athlète est-elle proportionnelle au temps de parc
 \VersionControle{4}
 \ExercicePommes{90}{54}{24}{50}{180}
 \ExerciceAmanda{20}{56}
-\ExerciceCoef{5}{8}{20}{32}{6}{54}{8}{72}
+\ExerciceCoef{5}{8}{20}{32}{6}{54}{8}{71}
 \ExercicePieton{$5{,}6$}{80}{64}{$7{,}7$}
 \ExerciceYaourts{6}{2{,}10}{12}{4{,}20}
 \ExerciceAthlete{120}{12}{240}{27}
@@ -191,7 +191,7 @@ La distance parcourue par cet athlète est-elle proportionnelle au temps de parc
 \VersionControle{5}
 \ExercicePommes{150}{90}{30}{60}{260}
 \ExerciceAmanda{5}{63}
-\ExerciceCoef{6}{9}{30}{45}{10}{50}{12}{60}
+\ExerciceCoef{6}{9}{30}{45}{10}{50}{12}{59}
 \ExercicePieton{$4{,}5$}{45}{36}{$6{,}8$}
 \ExerciceYaourts{4}{1{,}40}{8}{2{,}80}
 \ExerciceAthlete{60}{6}{120}{13}
@@ -200,7 +200,7 @@ La distance parcourue par cet athlète est-elle proportionnelle au temps de parc
 \VersionControle{6}
 \ExercicePommes{70}{42}{36}{80}{210}
 \ExerciceAmanda{10}{28}
-\ExerciceCoef{4}{7}{16}{28}{8}{40}{11}{55}
+\ExerciceCoef{4}{7}{16}{28}{8}{40}{11}{54}
 \ExercicePieton{$6{,}6$}{55}{44}{$8{,}4$}
 \ExerciceYaourts{5}{2{,}25}{10}{4{,}50}
 \ExerciceAthlete{90}{9}{180}{20}
@@ -209,7 +209,7 @@ La distance parcourue par cet athlète est-elle proportionnelle au temps de parc
 \VersionControle{7}
 \ExercicePommes{110}{66}{42}{90}{270}
 \ExerciceAmanda{2}{65}
-\ExerciceCoef{3}{8}{15}{40}{12}{48}{15}{60}
+\ExerciceCoef{3}{8}{15}{40}{12}{48}{15}{59}
 \ExercicePieton{$5{,}4$}{75}{60}{$7{,}2$}
 \ExerciceYaourts{3}{1{,}05}{6}{2{,}10}
 \ExerciceAthlete{70}{7}{140}{16}
@@ -218,7 +218,7 @@ La distance parcourue par cet athlète est-elle proportionnelle au temps de parc
 \VersionControle{8}
 \ExercicePommes{130}{78}{48}{100}{310}
 \ExerciceAmanda{50}{77}
-\ExerciceCoef{7}{9}{21}{27}{14}{42}{18}{54}
+\ExerciceCoef{7}{9}{21}{27}{14}{42}{18}{53}
 \ExercicePieton{$7{,}2$}{90}{72}{$9{,}6$}
 \ExerciceYaourts{6}{2{,}40}{12}{4{,}80}
 \ExerciceAthlete{110}{11}{220}{25}
