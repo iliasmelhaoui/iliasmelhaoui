@@ -1,6 +1,6 @@
 %% Feuille d'exercices : Réduction d'expressions littérales - Niveau 5ème
 %% Auteur : Généré pour Overleaf
-%% Date : 2024
+%% Compilation recommandée : XeLaTeX ou LuaLaTeX pour Verdana
 
 \documentclass[12pt, a4paper]{article}
 \usepackage[utf8]{inputenc}
@@ -15,6 +15,14 @@
 \usepackage{xcolor}
 \usepackage{fancyhdr}
 \usepackage{lastpage}
+\usepackage{fontspec}
+\usepackage{setspace}
+
+%% Police Verdana
+\setmainfont{Verdana}
+
+%% Interligne 1,5
+\onehalfspacing
 
 %% Style pour les exercices
 \newcommand{\exercice}[1]{\vspace{0.5cm}\noindent{\textbf{Exercice #1}} \\}
@@ -24,10 +32,9 @@
 %% En-tête et pied de page
 \pagestyle{fancy}
 \fancyhf{}
-\fancyhead[L]{\textsc{Feuille d'exercices - 5ème}}
-\fancyhead[R]{\textsc{Réduction d'expressions littérales}}
+\fancyhead[L]{\textbf{\underline{\LARGE S14 ; F2}}}
 \fancyfoot[C]{\thepage / \pageref{LastPage}}
-\renewcommand{\headrulewidth}{0.4pt}
+\renewcommand{\headrulewidth}{0pt}
 \renewcommand{\footrulewidth}{0.4pt}
 
 %% Titre
