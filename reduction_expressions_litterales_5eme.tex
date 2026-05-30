@@ -14,7 +14,6 @@
 \usepackage{multicol}
 \usepackage{xcolor}
 \usepackage{fancyhdr}
-\usepackage{lastpage}
 \usepackage{fontspec}
 \usepackage{setspace}
 
@@ -26,23 +25,18 @@
 
 %% Style pour les exercices
 \newcommand{\exercice}[1]{\vspace{0.5cm}\noindent{\textbf{Exercice #1}} \\}
-\newcommand{\question}[1]{\vspace{0.3cm}\noindent #1 \\}
-\newcommand{\reponse}[1]{\vspace{0.2cm}\noindent{\color{gray}\small #1} \\}
 
-%% En-tête et pied de page
+%% En-tête sans pied de page
 \pagestyle{fancy}
 \fancyhf{}
 \fancyhead[L]{\textbf{\underline{\LARGE S14 ; F2}}}
-\fancyhead[R]{}
-\fancyfoot[C]{\thepage / \pageref{LastPage}}
 \renewcommand{\headrulewidth}{0pt}
-\renewcommand{\footrulewidth}{0.4pt}
 
 \begin{document}
 
 \thispagestyle{fancy}
 
-%% Début des exercices (recto)
+%% Début des exercices
 \exercice{1}
 Réduis les expressions suivantes :
 \begin{multicols}{2}
@@ -126,41 +120,5 @@ Réduis les expressions suivantes :
 \item $B_1 = 6m + 3n - 2m - 4n + 5m - 1$
 \end{enumerate}
 \end{multicols}
-
-\vspace{1cm}
-
-%% Espace pour les réponses (verso)
-\section*{Espace pour les réponses}
-\vspace{0.5cm}
-
-\begin{center}
-\fbox{\begin{minipage}{0.9\textwidth}
-\textbf{À toi de jouer !} Utilise cet espace pour écrire tes calculs et tes réponses.
-\end{minipage}}
-\end{center}
-
-\vspace{0.5cm}
-
-\dotfill
-
-\vspace{2cm}
-
-\dotfill
-
-\vspace{2cm}
-
-\dotfill
-
-\vspace{2cm}
-
-\dotfill
-
-\vspace{2cm}
-
-\dotfill
-
-\newpage
-%% Suppression de S14 ; F2 sur le verso
-\thispagestyle{plain}
 
 \end{document}
