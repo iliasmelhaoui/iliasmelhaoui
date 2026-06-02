@@ -1,0 +1,153 @@
+%% Document LaTeX pour Overleaf - Exercices sur le calcul de volumes de pavés droits
+%% Auteur : iliasmelhaoui
+%% Thème : Géométrie dans l'espace - Volumes
+
+\documentclass[12pt, a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[french]{babel}
+\usepackage[T1]{fontenc}
+\usepackage{geometry}
+\geometry{left=2cm, right=2cm, top=2cm, bottom=2cm}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\usepackage{enumitem}
+\usepackage{fancyhdr}
+\usepackage{lastpage}
+\usepackage{hyperref}
+
+%% Configuration de la page
+\pagestyle{fancy}
+\fancyhf{}
+\rhead{Exercices - Volumes de pavés droits}
+\lhead{Mathématiques - Niveau Collège}
+\rfoot{Page \thepage / \pageref{LastPage}}
+\lfoot{© iliasmelhaoui}
+
+%% Couleurs
+\usepackage{xcolor}
+\definecolor{myblue}{RGB}{0, 80, 150}
+\definecolor{mygreen}{RGB}{0, 120, 0}
+
+%% Commandes personnalisées
+\newcommand{\pave}[3]{\text{Pavé droit de dimensions } #1 \times #2 \times #3}
+\newcommand{\volume}[1]{\text{Volume} = #1}
+
+\title{\color{myblue}\textbf{Exercices sur le calcul de volumes de pavés droits}}
+\author{}
+\date{}
+
+\begin{document}
+
+\maketitle
+
+\section*{Introduction}
+Le pavé droit (ou parallélépipède rectangle) est un solide dont les six faces sont des rectangles.\\
+Pour calculer son volume, on utilise la formule :
+\begin{center}
+\fbox{\begin{minipage}{0.6\textwidth}
+\begin{center}
+\large $\mathcal{V} = \text{Longueur} \times \text{Largeur} \times \text{Hauteur}$
+\end{center}
+\end{minipage}}
+\end{center}
+
+\section*{Exercice 1 - Calcul direct}
+\begin{enumerate}[label=\textbf{\arabic*.}]
+    \item Calcule le volume d'un pavé droit de longueur 5 cm, de largeur 3 cm et de hauteur 2 cm.
+    \item Calcule le volume d'un pavé droit de longueur 8 dm, de largeur 4 dm et de hauteur 6 dm.
+    \item Calcule le volume d'un pavé droit de longueur 12 m, de largeur 5 m et de hauteur 2,5 m.
+    \item Calcule le volume d'un pavé droit de longueur 15 cm, de largeur 10 cm et de hauteur 8 cm.
+\end{enumerate}
+
+\section*{Exercice 2 - Conversion d'unités}
+\begin{enumerate}[label=\textbf{\arabic*.}]
+    \item Un pavé droit a pour dimensions : 200 mm de longueur, 50 mm de largeur et 30 mm de hauteur. Calcule son volume en mm³, puis convertis-le en cm³.
+    \item Un pavé droit a pour dimensions : 0,5 dm de longueur, 0,3 dm de largeur et 0,2 dm de hauteur. Calcule son volume en dm³, puis convertis-le en cm³.
+    \item Un pavé droit a pour dimensions : 2,5 m de longueur, 1,2 m de largeur et 0,8 m de hauteur. Calcule son volume en m³, puis convertis-le en dm³.
+\end{enumerate}
+
+\section*{Exercice 3 - Problèmes concrets}
+\begin{enumerate}[label=\textbf{\arabic*.}]
+    \item Une piscine a la forme d'un pavé droit de 10 m de longueur, 5 m de largeur et 2 m de profondeur. Quel volume d'eau peut-elle contenir ?
+    \item Une boîte à chaussures a pour dimensions : 35 cm de longueur, 20 cm de largeur et 15 cm de hauteur. Quel est son volume ?
+    \item Un conteneur maritime a pour dimensions : 12 m de longueur, 2,5 m de largeur et 2,5 m de hauteur. Quel volume peut-il contenir ?
+    \item Un aquarium a pour dimensions : 80 cm de longueur, 40 cm de largeur et 50 cm de hauteur. Quel volume d'eau peut-il contenir ?
+\end{enumerate}
+
+\section*{Exercice 4 - Calcul de dimensions manquantes}
+\begin{enumerate}[label=\textbf{\arabic*.}]
+    \item Un pavé droit a un volume de 240 cm³. Sa longueur est de 8 cm et sa largeur de 5 cm. Quelle est sa hauteur ?
+    \item Un pavé droit a un volume de 1 000 dm³. Sa longueur est de 10 dm et sa hauteur de 5 dm. Quelle est sa largeur ?
+    \item Un pavé droit a un volume de 3 600 m³. Sa largeur est de 15 m et sa hauteur de 12 m. Quelle est sa longueur ?
+    \item Un pavé droit a un volume de 500 cm³. Sa longueur est de 10 cm et sa hauteur de 5 cm. Quelle est sa largeur ?
+\end{enumerate}
+
+\section*{Exercice 5 - Comparaison de volumes}
+\begin{enumerate}[label=\textbf{\arabic*.}]
+    \item On a deux pavés droits :
+    \begin{itemize}
+        \item Pavé A : 6 cm × 4 cm × 3 cm
+        \item Pavé B : 8 cm × 5 cm × 2 cm
+    \end{itemize}
+    Lequel des deux pavés a le plus grand volume ?
+    
+    \item On a deux pavés droits :
+    \begin{itemize}
+        \item Pavé C : 10 dm × 8 dm × 6 dm
+        \item Pavé D : 12 dm × 5 dm × 4 dm
+    \end{itemize}
+    Lequel des deux pavés a le plus grand volume ?
+    
+    \item On a deux pavés droits :
+    \begin{itemize}
+        \item Pavé E : 2,5 m × 2 m × 1,5 m
+        \item Pavé F : 3 m × 1,8 m × 1,2 m
+    \end{itemize}
+    Lequel des deux pavés a le plus grand volume ?
+\end{enumerate}
+
+\section*{Exercice 6 - Pavés empilés}
+\begin{enumerate}[label=\textbf{\arabic*.}]
+    \item On empile 5 pavés droits identiques de dimensions 10 cm × 8 cm × 4 cm. Quel est le volume total occupé par ces pavés ?
+    \item On empile 12 pavés droits identiques de dimensions 15 cm × 10 cm × 5 cm. Quel est le volume total occupé par ces pavés ?
+    \item On a un grand pavé droit de dimensions 30 cm × 20 cm × 10 cm. On le divise en petits pavés droits de dimensions 5 cm × 4 cm × 2 cm. Combien de petits pavés peut-on obtenir ?
+\end{enumerate}
+
+\section*{Exercice 7 - Applications variées}
+\begin{enumerate}[label=\textbf{\arabic*.}]
+    \item Un cube est un pavé droit particulier où toutes les arêtes sont égales. Calcule le volume d'un cube de 5 cm d'arête.
+    \item Une brique a pour dimensions : 20 cm × 10 cm × 5 cm. Quel est son volume ? Combien de briques faut-il pour construire un mur de 1 m³ ?
+    \item Un carton a pour dimensions : 60 cm × 40 cm × 30 cm. Peut-on y ranger 24 petits pavés de dimensions 10 cm × 10 cm × 10 cm ? Justifie ta réponse.
+    \item Un réservoir d'eau a pour dimensions : 2 m × 1,5 m × 1 m. Il est rempli aux $\frac{3}{4}$ de sa capacité. Quel volume d'eau contient-il ?
+\end{enumerate}
+
+\section*{Exercice 8 - Défi}
+\begin{enumerate}[label=\textbf{\arabic*.}]
+    \item Un pavé droit a un volume de 1 m³. Quelles pourraient être ses dimensions si elles sont des nombres entiers de décimètres ? (Trouve toutes les possibilités.)
+    \item Un pavé droit a pour volume 24 cm³. Ses dimensions sont des nombres entiers de centimètres. Quelles sont toutes les combinaisons possibles pour ses dimensions ?
+    \item On veut construire un pavé droit avec des cubes de 1 cm³. Si on utilise 120 cubes, quelles pourraient être les dimensions du pavé droit ? (Trouve toutes les possibilités.)
+\end{enumerate}
+
+\section*{Corrigé type (à compléter)}
+\begin{center}
+\fbox{\begin{minipage}{0.9\textwidth}
+\textbf{Exemple de correction pour l'Exercice 1.1 :}\\
+Données : Longueur = 5 cm, Largeur = 3 cm, Hauteur = 2 cm.\\
+Calcul : $\mathcal{V} = 5 \times 3 \times 2 = 30$ cm³.\\
+Réponse : Le volume du pavé droit est de \textbf{30 cm³}.
+\end{minipage}}
+\end{center}
+
+\vspace{1cm}
+\begin{center}
+\fbox{\begin{minipage}{0.9\textwidth}
+\textbf{Rappel :}\\
+Pour calculer le volume d'un pavé droit, il suffit de multiplier ses trois dimensions :\\
+$\mathcal{V} = \text{Longueur} \times \text{Largeur} \times \text{Hauteur}$\\
+N'oublie pas de vérifier les unités et de les convertir si nécessaire !
+\end{minipage}}
+\end{center}
+
+\end{document}
