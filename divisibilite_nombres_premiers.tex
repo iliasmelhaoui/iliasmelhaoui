@@ -1,0 +1,233 @@
+% !TEX program = xelatex
+
+\documentclass[13pt]{extarticle}
+
+% ---- Polices et encodage ----
+\usepackage{fontspec}
+\setmainfont{Verdana}
+\setsansfont{Verdana}
+\usepackage[french]{babel}
+
+% ---- Mise en page ----
+\usepackage[margin=2.5cm]{geometry}
+\usepackage{setspace}
+\onehalfspacing % interligne 1,5
+
+% ---- Mathématiques ----
+\usepackage{amsmath, amssymb}
+\usepackage{mathpazo} % charge un package math compatible ; optionnel
+
+% ---- Titres soulignés ----
+\usepackage{titlesec}
+\usepackage{ulem}
+
+% Titres de parties (I, II, III) soulignés
+% \uline placé dans le before-code (et non dans le format) pour éviter
+% l'affichage en double du titre avec titlesec + ulem.
+\titleformat{\section}
+  {\normalfont\Large\bfseries}
+  {\thesection}{1em}{\uline}
+\titlespacing*{\section}{0pt}{1.5ex plus 1ex minus .2ex}{1.2ex plus .2ex}
+
+% Titres de sous-parties soulignés
+\titleformat{\subsection}
+  {\normalfont\large\bfseries}
+  {\thesubsection}{1em}{\uline}
+\titlespacing*{\subsection}{0pt}{1.3ex plus 1ex minus .2ex}{1ex plus .2ex}
+
+% ---- Commandes personnalisées pour souligner les types de blocs ----
+\newcommand{\blocTitre}[1]{%
+  \vspace{1em}%
+  \noindent\underline{\textbf{#1 :}}\par%
+  \vspace{0.3em}%
+}
+
+% ---- En-tête de page ----
+\pagestyle{empty}
+
+\begin{document}
+
+% ===================== TITRE PRINCIPAL =====================
+\begin{center}
+  \Large\bfseries\underline{Séquence n\textsuperscript{o} 1 : Divisibilité et nombres premiers}
+\end{center}
+
+\vspace{1em}
+
+% ===================== PARTIE I =====================
+\section{Multiples et diviseurs}
+
+\blocTitre{Définition}
+
+Prenons $n$ et $k$ deux entiers. On dit que $n$ est un \textbf{multiple} de $k$ s'il existe un entier $y$ tel que :
+\[
+n = k \times y
+\]
+
+On dit alors aussi que $k$ est un \textbf{diviseur} de $n$, ou bien que $k$ \textbf{divise} $n$, ou bien encore que $n$ est \textbf{divisible} par $k$.
+
+\blocTitre{Exemple}
+
+\begin{itemize}
+  \item 35 est un multiple de 5.
+\end{itemize}
+
+En effet, $35 = 5 \times 7$.
+
+Il existe donc un entier tel que 5 multiplié par cet entier donne 35. Cet entier est 7.
+
+Formulé autrement :
+\begin{itemize}
+  \item 5 est un diviseur de 35.
+  \item 5 divise 35.
+  \item 35 est divisible par 5.
+\end{itemize}
+
+% --- Page 2 ---
+
+\blocTitre{Propriété}
+
+Prenons $n$ et $k$ deux entiers.
+
+$k$ divise $n$ si et seulement si $\dfrac{n}{k}$ est un entier.
+
+\blocTitre{Exemples}
+
+\textbf{16 est-il un multiple de 5 ?}
+
+\[
+\frac{16}{5} = 3{,}2
+\]
+et $3{,}2$ n'est pas un entier, donc 16 n'est pas un multiple de 5.
+
+\textbf{119 est-il divisible par 7 ?}
+
+\[
+\frac{119}{7} = 17
+\]
+et 17 est un entier, donc 119 est divisible par 7.
+
+% --- Page 3 ---
+
+\blocTitre{Propriété : critères de divisibilité}
+
+Prenons $n$ un entier.
+
+\begin{enumerate}
+  \item $n$ est divisible par \textbf{2} si et seulement si le chiffre des unités de $n$ est : 0, 2, 4, 6 ou 8.
+  \item $n$ est divisible par \textbf{5} si et seulement si le chiffre des unités de $n$ est 0 ou 5.
+  \item $n$ est divisible par \textbf{10} si et seulement si le chiffre des unités de $n$ est 0.
+  \item $n$ est divisible par \textbf{3} si et seulement si la somme des chiffres permettant d'écrire $n$ est un multiple de 3.
+\end{enumerate}
+
+\blocTitre{Exemple}
+
+235 :
+\begin{itemize}
+  \item 235 n'est pas divisible par 2 ; son chiffre des unités n'est pas 0, 2, 4, 6 ou 8.
+  \item 235 est divisible par 5 ; son chiffre des unités est 5.
+  \item 235 n'est pas divisible par 10 ; son chiffre des unités n'est pas zéro.
+  \item 235 n'est pas divisible par 3 car $2 + 3 + 5 = 10$ et 10 n'est pas un multiple de 3.
+\end{itemize}
+
+% ===================== PARTIE II =====================
+\section{Nombres premiers}
+
+\blocTitre{Définition}
+
+Un \textbf{nombre premier} est un entier différent de 1 et divisible seulement par lui-même et 1.
+
+\blocTitre{Exemples}
+
+2, 3, 5, 7, 11 sont des nombres premiers.
+
+% --- Page 5 ---
+
+\blocTitre{Théorème}
+
+Tout nombre entier différent de 0 et 1 se décompose en produit de nombres premiers.
+
+Cette décomposition est \textbf{unique}, à l'ordre des facteurs près.
+
+\blocTitre{Exemple}
+
+\begin{itemize}
+  \item Décomposition de 66 :
+\end{itemize}
+
+\[
+\begin{aligned}
+66 &= 2 \times 33 \\
+   &= 2 \times 3 \times 11
+\end{aligned}
+\]
+
+On a décomposé 66 en produit de nombres premiers.
+
+\begin{itemize}
+  \item Décomposition de 83 :
+\end{itemize}
+
+\[
+\begin{aligned}
+83 &= 83
+\end{aligned}
+\]
+
+83 est premier.
+
+% --- Page 6 ---
+
+\[
+\begin{aligned}
+\bullet\ 60 &= 2 \times 30 \\
+            &= 2 \times 3 \times 10 \\
+            &= 2 \times 3 \times 2 \times 5
+\end{aligned}
+\]
+
+% ===================== PARTIE III =====================
+\section{Fractions irréductibles}
+
+\blocTitre{Définition}
+
+Une fraction est \textbf{irréductible} si on ne peut pas la simplifier.
+
+\blocTitre{Exemples}
+
+\begin{itemize}
+  \item $\dfrac{2}{3}$ est irréductible.
+  \item Rendons $\dfrac{12}{18}$ irréductible.
+\end{itemize}
+
+\textbf{Méthodes :}
+
+\medskip
+
+\textbf{Méthode 1 :}
+\[
+\begin{aligned}
+\frac{12}{18} &= \frac{2 \times 6}{2 \times 9} \\
+              &= \frac{6}{9} \\
+              &= \frac{2 \times 3}{3 \times 3} \\
+              &= \frac{2}{3}
+\end{aligned}
+\]
+
+\textbf{Méthode 2 :}
+\[
+\begin{aligned}
+\frac{12}{18} &= \frac{6 \times 2}{6 \times 3} \\
+              &= \frac{2}{3}
+\end{aligned}
+\]
+
+\textbf{Méthode 3 :}
+\[
+\begin{aligned}
+\frac{12}{18} &= \frac{2 \times 2 \times 3}{2 \times 3 \times 3} \\
+              &= \frac{2}{3}
+\end{aligned}
+\]
+
+\end{document}
