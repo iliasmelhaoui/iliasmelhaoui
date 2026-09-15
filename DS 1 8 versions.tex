@@ -1,0 +1,732 @@
+% =============================================================
+%  Contrôle n°1 — Priorités opératoires
+%  8 versions (sujets) dans un seul fichier
+%  Compiler avec XeLaTeX ou LuaLaTeX (police Verdana via fontspec)
+%  Dans Overleaf : Menu -> Compiler -> sélectionner "XeLaTeX"
+% =============================================================
+
+\documentclass[13pt]{extarticle}
+
+% ---- Police : Verdana taille 13 ----
+\usepackage{fontspec}
+\setmainfont{Verdana}
+
+% ---- Interligne 1,5 ----
+\usepackage{setspace}
+\onehalfspacing
+
+% ---- Marges raisonnables ----
+\usepackage[a4paper,margin=2cm]{geometry}
+
+% ---- Maths & listes ----
+\usepackage{amsmath}
+\usepackage{enumitem}
+\setlist[itemize]{itemsep=0.4em, topsep=0.3em}
+
+% ---- Commande de titre souligné ----
+% Utilisée pour les titres principaux et les sous-titres
+% (propriétés, exemples, exercices, etc.)
+\newcommand{\titre}[1]{%
+  \begin{center}%
+    \Large\underline{\textbf{#1}}%
+  \end{center}%
+}
+\newcommand{\stitre}[1]{%
+  \vspace{0.6em}%
+  \noindent\large\underline{\textbf{#1}}%
+  \vspace{0.3em}\par%
+}
+\newcommand{\exo}[1]{%
+  \vspace{0.8em}%
+  \noindent\large\underline{\textbf{Exercice #1}}%
+  \vspace{0.2em}\par%
+}
+\newcommand{\exobonus}[1]{%
+  \vspace{0.8em}%
+  \noindent\large\underline{\textbf{Exercice bonus #1}}%
+  \vspace{0.2em}\par%
+}
+
+% ---- Pas de numéro de page ----
+\pagestyle{empty}
+
+% ---- En-tête commun à chaque version ----
+\newcommand{\entetecontrole}[1]{%
+\begin{center}
+\textbf{\huge{Contrôle n°1 --- Version #1}}
+\end{center}
+
+\begin{center}
+\textbf{Calculatrice interdite.}\par
+\textbf{Le sujet est recto-verso.}
+
+\end{center}
+}
+
+\begin{document}
+
+% =============================================================
+%  VERSION 1
+% =============================================================
+\entetecontrole{1}
+% ---------------------------------------------------------------
+\exo{1}
+
+\noindent Recopie et calcule l'expression ci-dessous en détaillant au maximum tes calculs.
+
+\[
+18 - 6 - 2 + 19 - 3
+\]
+
+% ---------------------------------------------------------------
+\exo{2}
+
+\noindent Recopie et calcule les expressions ci-dessous en détaillant tes calculs.
+
+\begin{itemize}
+  \item[a)] $5 + 3 \times 2$
+  \item[b)] $34 - 6 \times 2$
+  \item[c)] $29 + 12 \div 4$
+  \item[d)] $6 + 9 \times 3 + 2 - 4 \div 4$
+\end{itemize}
+
+% ---------------------------------------------------------------
+\exo{3}
+
+\noindent J'ai acheté 3 mangas à 7 euros chacun et 2 romans à 8 euros chacun.
+
+\begin{itemize}
+  \item[a)] Calcule combien j'ai dépensé.
+  \item[b)] Écris en une expression le calcul de la dépense. (Sauf si cela a déjà été fait à la question a.)
+\end{itemize}
+
+% ---------------------------------------------------------------
+\exo{4}
+
+\noindent Recopie et calcule les expressions ci-dessous en détaillant tes calculs.
+
+\begin{itemize}
+  \item[a)] $27 - (6 + 4) \div 2$
+  \item[b)] $(3 + 8) \times 3 - 7 + 5$
+  \item[c)] $(19 - (5 + 7)) \times 3$
+  \item[d)] $4 \times (21 - (6 + 13)) - 9$
+\end{itemize}
+
+\newpage
+
+% ---------------------------------------------------------------
+\exo{5}
+
+\noindent 4 stylos et 1 gomme coûtent ensemble 11 euros.
+
+\noindent Un stylo coûte 2 euros.
+
+\begin{itemize}
+  \item[a)] Combien coûte la gomme ?
+  \item[b)] Écris en une expression le calcul donnant le prix de la gomme. (Sauf si cela a déjà été fait à la question a.)
+\end{itemize}
+
+% ---------------------------------------------------------------
+\exobonus{1}
+
+\noindent Traduis chaque phrase par une expression mathématique.
+
+\begin{itemize}
+  \item[a)] la somme du produit de 7 par 3 et de 13
+  \item[b)] le produit de 9 par la somme de 7 et 1
+\end{itemize}
+
+% ---------------------------------------------------------------
+\exobonus{2}
+
+\noindent Traduis les expressions mathématiques ci-dessous par des phrases en utilisant les mots \emph{somme} et \emph{produit}.
+
+\begin{itemize}
+  \item[a)] $8 \times 3 + 7$
+  \item[b)] $(6 + 5) \times 4$
+\end{itemize}
+
+\newpage
+
+% =============================================================
+%  VERSION 2
+% =============================================================
+\entetecontrole{2}
+% ---------------------------------------------------------------
+\exo{1}
+
+\noindent Recopie et calcule l'expression ci-dessous en détaillant au maximum tes calculs.
+
+\[
+17 - 4 - 5 + 23 - 2
+\]
+
+% ---------------------------------------------------------------
+\exo{2}
+
+\noindent Recopie et calcule les expressions ci-dessous en détaillant tes calculs.
+
+\begin{itemize}
+  \item[a)] $8 + 4 \times 3$
+  \item[b)] $41 - 7 \times 3$
+  \item[c)] $37 + 15 \div 5$
+  \item[d)] $5 + 8 \times 4 + 3 - 6 \div 3$
+\end{itemize}
+
+% ---------------------------------------------------------------
+\exo{3}
+
+\noindent J'ai acheté 4 mangas à 6 euros chacun et 2 romans à 9 euros chacun.
+
+\begin{itemize}
+  \item[a)] Calcule combien j'ai dépensé.
+  \item[b)] Écris en une expression le calcul de la dépense. (Sauf si cela a déjà été fait à la question a.)
+\end{itemize}
+
+% ---------------------------------------------------------------
+\exo{4}
+
+\noindent Recopie et calcule les expressions ci-dessous en détaillant tes calculs.
+
+\begin{itemize}
+  \item[a)] $32 - (5 + 9) \div 2$
+  \item[b)] $(4 + 7) \times 4 - 9 + 3$
+  \item[c)] $(21 - (8 + 5)) \times 4$
+  \item[d)] $5 \times (25 - (9 + 11)) - 7$
+\end{itemize}
+
+\newpage
+
+% ---------------------------------------------------------------
+\exo{5}
+
+\noindent 5 stylos et 1 gomme coûtent ensemble 14 euros.
+
+\noindent Un stylo coûte 2 euros.
+
+\begin{itemize}
+  \item[a)] Combien coûte la gomme ?
+  \item[b)] Écris en une expression le calcul donnant le prix de la gomme. (Sauf si cela a déjà été fait à la question a.)
+\end{itemize}
+
+% ---------------------------------------------------------------
+\exobonus{1}
+
+\noindent Traduis chaque phrase par une expression mathématique.
+
+\begin{itemize}
+  \item[a)] la somme du produit de 8 par 4 et de 11
+  \item[b)] le produit de 7 par la somme de 9 et 2
+\end{itemize}
+
+% ---------------------------------------------------------------
+\exobonus{2}
+
+\noindent Traduis les expressions mathématiques ci-dessous par des phrases en utilisant les mots \emph{somme} et \emph{produit}.
+
+\begin{itemize}
+  \item[a)] $9 \times 4 + 6$
+  \item[b)] $(7 + 4) \times 5$
+\end{itemize}
+
+\newpage
+
+% =============================================================
+%  VERSION 3
+% =============================================================
+\entetecontrole{3}
+% ---------------------------------------------------------------
+\exo{1}
+
+\noindent Recopie et calcule l'expression ci-dessous en détaillant au maximum tes calculs.
+
+\[
+15 - 3 - 4 + 25 - 5
+\]
+
+% ---------------------------------------------------------------
+\exo{2}
+
+\noindent Recopie et calcule les expressions ci-dessous en détaillant tes calculs.
+
+\begin{itemize}
+  \item[a)] $7 + 5 \times 4$
+  \item[b)] $46 - 8 \times 4$
+  \item[c)] $43 + 18 \div 6$
+  \item[d)] $8 + 7 \times 5 + 4 - 8 \div 2$
+\end{itemize}
+
+% ---------------------------------------------------------------
+\exo{3}
+
+\noindent J'ai acheté 3 mangas à 8 euros chacun et 3 romans à 7 euros chacun.
+
+\begin{itemize}
+  \item[a)] Calcule combien j'ai dépensé.
+  \item[b)] Écris en une expression le calcul de la dépense. (Sauf si cela a déjà été fait à la question a.)
+\end{itemize}
+
+% ---------------------------------------------------------------
+\exo{4}
+
+\noindent Recopie et calcule les expressions ci-dessous en détaillant tes calculs.
+
+\begin{itemize}
+  \item[a)] $36 - (7 + 9) \div 2$
+  \item[b)] $(5 + 9) \times 4 - 8 + 6$
+  \item[c)] $(23 - (6 + 8)) \times 5$
+  \item[d)] $6 \times (27 - (8 + 14)) - 5$
+\end{itemize}
+
+\newpage
+
+% ---------------------------------------------------------------
+\exo{5}
+
+\noindent 6 stylos et 1 gomme coûtent ensemble 16 euros.
+
+\noindent Un stylo coûte 2 euros.
+
+\begin{itemize}
+  \item[a)] Combien coûte la gomme ?
+  \item[b)] Écris en une expression le calcul donnant le prix de la gomme. (Sauf si cela a déjà été fait à la question a.)
+\end{itemize}
+
+% ---------------------------------------------------------------
+\exobonus{1}
+
+\noindent Traduis chaque phrase par une expression mathématique.
+
+\begin{itemize}
+  \item[a)] la somme du produit de 9 par 5 et de 12
+  \item[b)] le produit de 6 par la somme de 8 et 3
+\end{itemize}
+
+% ---------------------------------------------------------------
+\exobonus{2}
+
+\noindent Traduis les expressions mathématiques ci-dessous par des phrases en utilisant les mots \emph{somme} et \emph{produit}.
+
+\begin{itemize}
+  \item[a)] $7 \times 5 + 8$
+  \item[b)] $(8 + 3) \times 6$
+\end{itemize}
+
+\newpage
+
+% =============================================================
+%  VERSION 4
+% =============================================================
+\entetecontrole{4}
+% ---------------------------------------------------------------
+\exo{1}
+
+\noindent Recopie et calcule l'expression ci-dessous en détaillant au maximum tes calculs.
+
+\[
+19 - 5 - 3 + 21 - 6
+\]
+
+% ---------------------------------------------------------------
+\exo{2}
+
+\noindent Recopie et calcule les expressions ci-dessous en détaillant tes calculs.
+
+\begin{itemize}
+  \item[a)] $6 + 4 \times 5$
+  \item[b)] $38 - 5 \times 4$
+  \item[c)] $31 + 16 \div 8$
+  \item[d)] $7 + 6 \times 4 + 5 - 9 \div 3$
+\end{itemize}
+
+% ---------------------------------------------------------------
+\exo{3}
+
+\noindent J'ai acheté 4 mangas à 6 euros chacun et 3 romans à 7 euros chacun.
+
+\begin{itemize}
+  \item[a)] Calcule combien j'ai dépensé.
+  \item[b)] Écris en une expression le calcul de la dépense. (Sauf si cela a déjà été fait à la question a.)
+\end{itemize}
+
+% ---------------------------------------------------------------
+\exo{4}
+
+\noindent Recopie et calcule les expressions ci-dessous en détaillant tes calculs.
+
+\begin{itemize}
+  \item[a)] $29 - (4 + 8) \div 2$
+  \item[b)] $(6 + 7) \times 5 - 8 + 4$
+  \item[c)] $(25 - (9 + 6)) \times 4$
+  \item[d)] $5 \times (24 - (7 + 12)) - 6$
+\end{itemize}
+
+\newpage
+
+% ---------------------------------------------------------------
+\exo{5}
+
+\noindent 4 stylos et 1 gomme coûtent ensemble 13 euros.
+
+\noindent Un stylo coûte 3 euros.
+
+\begin{itemize}
+  \item[a)] Combien coûte la gomme ?
+  \item[b)] Écris en une expression le calcul donnant le prix de la gomme. (Sauf si cela a déjà été fait à la question a.)
+\end{itemize}
+
+% ---------------------------------------------------------------
+\exobonus{1}
+
+\noindent Traduis chaque phrase par une expression mathématique.
+
+\begin{itemize}
+  \item[a)] la somme du produit de 6 par 5 et de 14
+  \item[b)] le produit de 8 par la somme de 6 et 3
+\end{itemize}
+
+% ---------------------------------------------------------------
+\exobonus{2}
+
+\noindent Traduis les expressions mathématiques ci-dessous par des phrases en utilisant les mots \emph{somme} et \emph{produit}.
+
+\begin{itemize}
+  \item[a)] $6 \times 5 + 9$
+  \item[b)] $(9 + 2) \times 7$
+\end{itemize}
+
+\newpage
+
+% =============================================================
+%  VERSION 5
+% =============================================================
+\entetecontrole{5}
+% ---------------------------------------------------------------
+\exo{1}
+
+\noindent Recopie et calcule l'expression ci-dessous en détaillant au maximum tes calculs.
+
+\[
+16 - 7 - 1 + 24 - 4
+\]
+
+% ---------------------------------------------------------------
+\exo{2}
+
+\noindent Recopie et calcule les expressions ci-dessous en détaillant tes calculs.
+
+\begin{itemize}
+  \item[a)] $9 + 4 \times 5$
+  \item[b)] $47 - 9 \times 4$
+  \item[c)] $35 + 14 \div 7$
+  \item[d)] $9 + 7 \times 4 + 6 - 8 \div 2$
+\end{itemize}
+
+% ---------------------------------------------------------------
+\exo{3}
+
+\noindent J'ai acheté 5 mangas à 6 euros chacun et 2 romans à 9 euros chacun.
+
+\begin{itemize}
+  \item[a)] Calcule combien j'ai dépensé.
+  \item[b)] Écris en une expression le calcul de la dépense. (Sauf si cela a déjà été fait à la question a.)
+\end{itemize}
+
+% ---------------------------------------------------------------
+\exo{4}
+
+\noindent Recopie et calcule les expressions ci-dessous en détaillant tes calculs.
+
+\begin{itemize}
+  \item[a)] $34 - (8 + 6) \div 2$
+  \item[b)] $(7 + 6) \times 5 - 9 + 4$
+  \item[c)] $(27 - (7 + 9)) \times 4$
+  \item[d)] $6 \times (26 - (9 + 11)) - 7$
+\end{itemize}
+
+\newpage
+
+% ---------------------------------------------------------------
+\exo{5}
+
+\noindent 5 stylos et 1 gomme coûtent ensemble 17 euros.
+
+\noindent Un stylo coûte 3 euros.
+
+\begin{itemize}
+  \item[a)] Combien coûte la gomme ?
+  \item[b)] Écris en une expression le calcul donnant le prix de la gomme. (Sauf si cela a déjà été fait à la question a.)
+\end{itemize}
+
+% ---------------------------------------------------------------
+\exobonus{1}
+
+\noindent Traduis chaque phrase par une expression mathématique.
+
+\begin{itemize}
+  \item[a)] la somme du produit de 7 par 5 et de 15
+  \item[b)] le produit de 6 par la somme de 9 et 4
+\end{itemize}
+
+% ---------------------------------------------------------------
+\exobonus{2}
+
+\noindent Traduis les expressions mathématiques ci-dessous par des phrases en utilisant les mots \emph{somme} et \emph{produit}.
+
+\begin{itemize}
+  \item[a)] $7 \times 6 + 5$
+  \item[b)] $(5 + 8) \times 6$
+\end{itemize}
+
+\newpage
+
+% =============================================================
+%  VERSION 6
+% =============================================================
+\entetecontrole{6}
+% ---------------------------------------------------------------
+\exo{1}
+
+\noindent Recopie et calcule l'expression ci-dessous en détaillant au maximum tes calculs.
+
+\[
+14 - 2 - 6 + 27 - 5
+\]
+
+% ---------------------------------------------------------------
+\exo{2}
+
+\noindent Recopie et calcule les expressions ci-dessous en détaillant tes calculs.
+
+\begin{itemize}
+  \item[a)] $4 + 5 \times 6$
+  \item[b)] $52 - 7 \times 5$
+  \item[c)] $39 + 21 \div 7$
+  \item[d)] $4 + 8 \times 5 + 7 - 10 \div 2$
+\end{itemize}
+
+% ---------------------------------------------------------------
+\exo{3}
+
+\noindent J'ai acheté 3 mangas à 9 euros chacun et 2 romans à 10 euros chacun.
+
+\begin{itemize}
+  \item[a)] Calcule combien j'ai dépensé.
+  \item[b)] Écris en une expression le calcul de la dépense. (Sauf si cela a déjà été fait à la question a.)
+\end{itemize}
+
+% ---------------------------------------------------------------
+\exo{4}
+
+\noindent Recopie et calcule les expressions ci-dessous en détaillant tes calculs.
+
+\begin{itemize}
+  \item[a)] $38 - (9 + 7) \div 2$
+  \item[b)] $(8 + 5) \times 6 - 9 + 7$
+  \item[c)] $(29 - (8 + 9)) \times 6$
+  \item[d)] $7 \times (28 - (9 + 13)) - 8$
+\end{itemize}
+
+\newpage
+
+% ---------------------------------------------------------------
+\exo{5}
+
+\noindent 6 stylos et 1 gomme coûtent ensemble 20 euros.
+
+\noindent Un stylo coûte 3 euros.
+
+\begin{itemize}
+  \item[a)] Combien coûte la gomme ?
+  \item[b)] Écris en une expression le calcul donnant le prix de la gomme. (Sauf si cela a déjà été fait à la question a.)
+\end{itemize}
+
+% ---------------------------------------------------------------
+\exobonus{1}
+
+\noindent Traduis chaque phrase par une expression mathématique.
+
+\begin{itemize}
+  \item[a)] la somme du produit de 8 par 6 et de 13
+  \item[b)] le produit de 7 par la somme de 9 et 4
+\end{itemize}
+
+% ---------------------------------------------------------------
+\exobonus{2}
+
+\noindent Traduis les expressions mathématiques ci-dessous par des phrases en utilisant les mots \emph{somme} et \emph{produit}.
+
+\begin{itemize}
+  \item[a)] $8 \times 7 + 6$
+  \item[b)] $(4 + 9) \times 7$
+\end{itemize}
+
+\newpage
+
+% =============================================================
+%  VERSION 7
+% =============================================================
+\entetecontrole{7}
+% ---------------------------------------------------------------
+\exo{1}
+
+\noindent Recopie et calcule l'expression ci-dessous en détaillant au maximum tes calculs.
+
+\[
+13 - 6 - 3 + 28 - 4
+\]
+
+% ---------------------------------------------------------------
+\exo{2}
+
+\noindent Recopie et calcule les expressions ci-dessous en détaillant tes calculs.
+
+\begin{itemize}
+  \item[a)] $5 + 6 \times 4$
+  \item[b)] $43 - 8 \times 5$
+  \item[c)] $45 + 24 \div 8$
+  \item[d)] $5 + 7 \times 6 + 8 - 6 \div 2$
+\end{itemize}
+
+% ---------------------------------------------------------------
+\exo{3}
+
+\noindent J'ai acheté 4 mangas à 7 euros chacun et 3 romans à 8 euros chacun.
+
+\begin{itemize}
+  \item[a)] Calcule combien j'ai dépensé.
+  \item[b)] Écris en une expression le calcul de la dépense. (Sauf si cela a déjà été fait à la question a.)
+\end{itemize}
+
+% ---------------------------------------------------------------
+\exo{4}
+
+\noindent Recopie et calcule les expressions ci-dessous en détaillant tes calculs.
+
+\begin{itemize}
+  \item[a)] $33 - (6 + 8) \div 2$
+  \item[b)] $(4 + 9) \times 5 - 6 + 8$
+  \item[c)] $(26 - (7 + 8)) \times 5$
+  \item[d)] $5 \times (23 - (6 + 11)) - 8$
+\end{itemize}
+
+\newpage
+
+% ---------------------------------------------------------------
+\exo{5}
+
+\noindent 4 stylos et 1 gomme coûtent ensemble 14 euros.
+
+\noindent Un stylo coûte 3 euros.
+
+\begin{itemize}
+  \item[a)] Combien coûte la gomme ?
+  \item[b)] Écris en une expression le calcul donnant le prix de la gomme. (Sauf si cela a déjà été fait à la question a.)
+\end{itemize}
+
+% ---------------------------------------------------------------
+\exobonus{1}
+
+\noindent Traduis chaque phrase par une expression mathématique.
+
+\begin{itemize}
+  \item[a)] la somme du produit de 9 par 4 et de 16
+  \item[b)] le produit de 8 par la somme de 7 et 5
+\end{itemize}
+
+% ---------------------------------------------------------------
+\exobonus{2}
+
+\noindent Traduis les expressions mathématiques ci-dessous par des phrases en utilisant les mots \emph{somme} et \emph{produit}.
+
+\begin{itemize}
+  \item[a)] $9 \times 5 + 7$
+  \item[b)] $(6 + 9) \times 8$
+\end{itemize}
+
+\newpage
+
+% =============================================================
+%  VERSION 8
+% =============================================================
+\entetecontrole{8}
+% ---------------------------------------------------------------
+\exo{1}
+
+\noindent Recopie et calcule l'expression ci-dessous en détaillant au maximum tes calculs.
+
+\[
+12 - 4 - 7 + 29 - 3
+\]
+
+% ---------------------------------------------------------------
+\exo{2}
+
+\noindent Recopie et calcule les expressions ci-dessous en détaillant tes calculs.
+
+\begin{itemize}
+  \item[a)] $6 + 5 \times 7$
+  \item[b)] $56 - 9 \times 5$
+  \item[c)] $41 + 27 \div 9$
+  \item[d)] $6 + 8 \times 6 + 9 - 8 \div 2$
+\end{itemize}
+
+% ---------------------------------------------------------------
+\exo{3}
+
+\noindent J'ai acheté 3 mangas à 8 euros chacun et 4 romans à 7 euros chacun.
+
+\begin{itemize}
+  \item[a)] Calcule combien j'ai dépensé.
+  \item[b)] Écris en une expression le calcul de la dépense. (Sauf si cela a déjà été fait à la question a.)
+\end{itemize}
+
+% ---------------------------------------------------------------
+\exo{4}
+
+\noindent Recopie et calcule les expressions ci-dessous en détaillant tes calculs.
+
+\begin{itemize}
+  \item[a)] $37 - (5 + 9) \div 2$
+  \item[b)] $(5 + 8) \times 6 - 7 + 9$
+  \item[c)] $(28 - (9 + 7)) \times 5$
+  \item[d)] $6 \times (29 - (8 + 15)) - 7$
+\end{itemize}
+
+\newpage
+
+% ---------------------------------------------------------------
+\exo{5}
+
+\noindent 5 stylos et 1 gomme coûtent ensemble 19 euros.
+
+\noindent Un stylo coûte 3 euros.
+
+\begin{itemize}
+  \item[a)] Combien coûte la gomme ?
+  \item[b)] Écris en une expression le calcul donnant le prix de la gomme. (Sauf si cela a déjà été fait à la question a.)
+\end{itemize}
+
+% ---------------------------------------------------------------
+\exobonus{1}
+
+\noindent Traduis chaque phrase par une expression mathématique.
+
+\begin{itemize}
+  \item[a)] la somme du produit de 7 par 6 et de 17
+  \item[b)] le produit de 9 par la somme de 8 et 5
+\end{itemize}
+
+% ---------------------------------------------------------------
+\exobonus{2}
+
+\noindent Traduis les expressions mathématiques ci-dessous par des phrases en utilisant les mots \emph{somme} et \emph{produit}.
+
+\begin{itemize}
+  \item[a)] $8 \times 6 + 9$
+  \item[b)] $(7 + 6) \times 8$
+\end{itemize}
+
+\newpage
+
+\end{document}
