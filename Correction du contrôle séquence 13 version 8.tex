@@ -1,0 +1,182 @@
+% !TEX program = xelatex
+% À compiler sur Overleaf avec le compilateur XeLaTeX
+% (Menu -> Compiler -> XeLaTeX) pour avoir la police Verdana.
+
+\documentclass[12pt,a4paper]{article}
+
+\usepackage{fontspec}
+% Verdana si disponible, sinon une police sans-serif proche
+\IfFontExistsTF{Verdana}{\setmainfont{Verdana}}{\setmainfont{DejaVu Sans}}
+
+\usepackage[french]{babel}
+\usepackage[margin=1.4cm]{geometry}
+\usepackage{amsmath}
+\usepackage{setspace}
+\usepackage{enumitem}
+\usepackage{array}
+
+% Interligne 1,5
+\onehalfspacing
+
+% Espacement réduit autour des égalités successives
+\setlength{\abovedisplayskip}{1pt}
+\setlength{\belowdisplayskip}{1pt}
+\setlength{\abovedisplayshortskip}{0pt}
+\setlength{\belowdisplayshortskip}{0pt}
+
+% ----- Pas de numérotation des pages -----
+\pagestyle{empty}
+
+\setlength{\parindent}{0pt}
+
+% ----- Commandes personnalisées -----
+\newcounter{exercice}
+\newcommand{\exercice}{%
+  \refstepcounter{exercice}%
+  \vspace{0.4em}
+  \noindent\underline{\textbf{Exercice \arabic{exercice}}}\par
+  \vspace{0em}
+}
+
+\setlist[enumerate,1]{label=\alph*),itemsep=0pt,topsep=1pt}
+\setlist[itemize,1]{leftmargin=1.6em,itemsep=0pt,topsep=1pt}
+
+\begin{document}
+
+% ----- En-tête -----
+\begin{center}
+  \underline{\Large\textbf{Correction du contrôle séquence 13 version 8}}\\[0.3em]
+ 
+\end{center}
+
+% =====================================================================
+\vspace{3cm}\exercice
+\begin{enumerate}
+  \item \textbf{Oui.} $64  = 8 \times 8$ 
+  \newline 8 est donc un diviseur de 64.
+  \item \textbf{Non.} $222 \div 7 \approx 31{,}71$
+  \newline le quotient n'est pas un entier,
+        donc 222 n'est pas un multiple de 7.
+  \item \textbf{Non.}  $35 < 105$, donc 35 n'est pas un multiple de 105.
+  \item \textbf{Non.} $56 \div 9 \approx 6{,}22$
+  \newline le quotient n'est pas un entier,
+        donc 9 n'est pas un diviseur de 56.
+\end{enumerate}
+
+% =====================================================================
+\vspace{1cm}\exercice
+\begin{enumerate}
+  \item \textbf{2 et 3} (acceptés aussi : 5 ; 7 ; 11 ; \dots).
+        Un nombre premier a exactement deux diviseurs : 1 et lui-même.
+  \item \textbf{4 et 6} (acceptés aussi : 1 ; 8 ; 9 ; \dots).
+      
+  \item Dans 18 ; 27 ; 2 ; 35 ; 77 ; 82 ; 67 ; 91, les deux nombres premiers sont
+        \textbf{2} et \textbf{67}.
+       
+\end{enumerate}
+
+% =====================================================================
+\vspace{1cm}\exercice
+\textbf{a) } $33 = 3 \times 11$, 
+donc les diviseurs de 33 sont $\boxed{1\ ;\ 33\ ;\ 3\ ;\ 11\ }$.
+
+\textbf{b) } $75 = 3 \times 5 \times 5$,
+donc les diviseurs de 75 sont
+$\boxed{1\ ;\ 75\ ;\ 3\ ;\ 5\ ;\ 15\ ;\ 25\ }$.
+
+% =====================================================================
+\vspace{1cm}\exercice
+
+
+\noindent\begin{minipage}[t]{0.48\textwidth}
+\textbf{a)}
+\begin{align*}
+39 &= 3 \times 13
+\end{align*}
+
+\textbf{b)}
+\begin{align*}
+98 &= 2 \times 49\\
+   &= 2 \times 7 \times 7
+\end{align*}
+\end{minipage}\hfill
+\begin{minipage}[t]{0.48\textwidth}
+\textbf{c)}
+\begin{align*}
+308 &= 2 \times 154\\
+    &= 2 \times 2 \times 77\\
+    &= 2 \times 2 \times 7 \times 11\\
+\end{align*}
+
+\textbf{d)}
+\begin{align*}
+385 &= 5 \times 77\\
+    &= 5 \times 7 \times 11
+\end{align*}
+\end{minipage}
+
+% =====================================================================
+\exercice
+\noindent\begin{minipage}[t]{0.31\textwidth}
+\textbf{a)} 
+\begin{align*}
+\dfrac{9}{12} &= \dfrac{3 \times 3}{3 \times 4}\\
+              &= \dfrac{3}{4}
+\end{align*}
+\end{minipage}\hfill
+\begin{minipage}[t]{0.31\textwidth}
+\textbf{b)} 
+\begin{align*}
+\dfrac{28}{42} &= \dfrac{14 \times 2}{14 \times 3}\\
+               &= \dfrac{2}{3}
+\end{align*}
+\end{minipage}\hfill
+\begin{minipage}[t]{0.31\textwidth}
+\textbf{c)} 
+\begin{align*}
+\dfrac{45}{105} &= \dfrac{15 \times 3}{15 \times 7}\\
+                &= \dfrac{3}{7}
+\end{align*}
+\end{minipage}
+
+% =====================================================================
+\vspace{1cm}\exercice
+Le nombre de paquets doit diviser à la fois 105 et 150 : c'est un diviseur commun à
+105 et 150. Pour en faire un maximum, on cherche le plus grand diviseur commun à 105 et 150.
+
+Avec les décompositions en facteurs premiers :
+$105 = 3 \times 5 \times 7$ et $150 = 2 \times 3 \times 5 \times 5$.
+Le plus grand diviseur commun à 105 et 150 est le produit des facteurs premiers communs :
+3 \times 5
+                      = 15
+
+Hulk et Batman peuvent donc faire au maximum \textbf{15 paquets},
+chacun contenant  7 cookies et 10 tartelettes.
+
+% =====================================================================
+\vspace{1cm}\exercice
+On utilise les critères de divisibilité :
+\newline \textbf{par 2} : le chiffre des unités est 0, 2, 4, 6 ou 8 ;
+\newline \textbf{par 3} : la somme des chiffres est divisible par 3
+(sommes des chiffres : $29$ pour 917\,480 ; $81$ pour 999\,999\,999 ; $31$ pour 459\,175) ;
+\newline \textbf{par 5} : le chiffre des unités est 0 ou 5 ;
+\newline \textbf{par 10} : le chiffre des unités est 0.
+
+\renewcommand{\arraystretch}{1.4}
+\setlength{\tabcolsep}{2pt}
+\begin{center}
+\small
+\begin{tabular}{|c|c|c|c|c|}
+\hline
+ & \textbf{Divisible par 2} & \textbf{Divisible par 3} & \textbf{Divisible par 5} & \textbf{Divisible par 10} \\
+\hline
+917\,480 & Oui & Non & Oui & Oui \\
+\hline
+999\,999\,999 & Non & Oui & Non & Non \\
+\hline
+459\,175 & Non & Non & Oui & Non \\
+\hline
+\end{tabular}
+\end{center}
+
+\end{document}
