@@ -1,6 +1,6 @@
 % =============================================================
 %  Correction du contrôle de calcul mental — 5e
-%  8 versions dans un seul fichier — tient sur une feuille recto-verso (2 pages)
+%  8 versions dans un seul fichier — UNE PAGE PAR VERSION
 %  Compiler avec XeLaTeX ou LuaLaTeX (police Verdana via fontspec)
 %  Dans Overleaf : Menu -> Compiler -> sélectionner "XeLaTeX"
 % =============================================================
@@ -15,7 +15,7 @@
 
 % ---- Marges ----
 \usepackage{geometry}
-\geometry{a4paper,margin=1.9cm}
+\geometry{a4paper,margin=2cm}
 
 % ---- Maths ----
 \usepackage{amsmath}
@@ -28,104 +28,140 @@
 \pagestyle{empty}
 \setlength{\parindent}{0pt}
 
-% ---- Titre de version souligné ----
+% ---- Titre de version souligné, centré ----
 \newcommand{\titreversion}[1]{%
-  \vspace{2mm plus 1mm minus 0.5mm}%
-  {\large\underline{\textbf{#1}}}\par
-  \vspace{0.5mm}%
+  \begin{center}%
+    {\Large\underline{\textbf{#1}}}%
+  \end{center}%
 }
-
-% ---- Une ligne de correction : n° + calcul à gauche, n° + calcul à droite ----
-\setlength{\tabcolsep}{0pt}
-\renewcommand{\arraystretch}{1.25}
 
 \begin{document}
 
-\begin{center}
-{\Large\bfseries Correction du contrôle de calcul mental --- 5\up{e}}
-\end{center}
-\vspace{-2mm}
-
 % =============================================================
 \titreversion{Correction du calcul mental --- Version 1/8}
-\begin{tabular}{@{}p{8.4cm}@{\hspace{0.4cm}}p{8.4cm}@{}}
-1. $9\times 7+60=63+60=\boxed{123}$ & 6. $7\times 17=70+49=\boxed{119}$ \\
-2. $6\times 9+70=54+70=\boxed{124}$ & 7. $14\times 6=60+24=\boxed{84}$ \\
-3. $7\times 10+7\times 5=70+35=\boxed{105}$ & 8. $7{,}5-0{,}04=7{,}50-0{,}04=7{,}46$ \\
-4. $6\times 10+6\times 7=60+42=\boxed{102}$ & 9. $6{,}3-0{,}007=6{,}300-0{,}007=6{,}293$ \\
-5. $8\times 13=80+24=\boxed{104}$ & 10. $5\times 10+5\times 8=50+40=90$ \\
-\end{tabular}
+\begin{enumerate}
+\item $9\times 7+60=63+60=\boxed{123}$
+\item $6\times 9+70=54+70=\boxed{124}$
+\item $7\times 10+7\times 5=70+35=\boxed{105}$
+\item $6\times 10+6\times 7=60+42=\boxed{102}$
+\item $8\times 13=80+24=\boxed{104}$
+\item $7\times 17=70+49=\boxed{119}$
+\item $14\times 6=60+24=\boxed{84}$
+\item $7{,}5-0{,}04=7{,}50-0{,}04=\boxed{7{,}46}$
+\item $6{,}3-0{,}007=6{,}300-0{,}007=\boxed{6{,}293}$
+\item $5\times 10+5\times 8=50+40=\boxed{90}$
+\end{enumerate}
+\newpage
 
 % =============================================================
 \titreversion{Correction du calcul mental --- Version 2/8}
-\begin{tabular}{@{}p{8.4cm}@{\hspace{0.4cm}}p{8.4cm}@{}}
-1. $6\times 8+50=48+50=\boxed{98}$ & 6. $9\times 15=90+45=\boxed{135}$ \\
-2. $8\times 6+90=48+90=\boxed{138}$ & 7. $16\times 8=80+48=\boxed{128}$ \\
-3. $8\times 10+8\times 6=80+48=128$ & 8. $5{,}2-0{,}06=5{,}20-0{,}06=5{,}14$ \\
-4. $9\times 10+9\times 5=90+45=135$ & 9. $8{,}5-0{,}002=8{,}500-0{,}002=8{,}498$ \\
-5. $6\times 15=60+30=\boxed{90}$ & 10. $6\times 10+6\times 6=60+36=96$ \\
-\end{tabular}
+\begin{enumerate}
+\item $6\times 8+50=48+50=\boxed{98}$
+\item $8\times 6+90=48+90=\boxed{138}$
+\item $8\times 10+8\times 6=80+48=\boxed{128}$
+\item $9\times 10+9\times 5=90+45=\boxed{135}$
+\item $6\times 15=60+30=\boxed{90}$
+\item $9\times 15=90+45=\boxed{135}$
+\item $16\times 8=80+48=\boxed{128}$
+\item $5{,}2-0{,}06=5{,}20-0{,}06=\boxed{5{,}14}$
+\item $8{,}5-0{,}002=8{,}500-0{,}002=\boxed{8{,}498}$
+\item $6\times 10+6\times 6=60+36=\boxed{96}$
+\end{enumerate}
+\newpage
 
 % =============================================================
 \titreversion{Correction du calcul mental --- Version 3/8}
-\begin{tabular}{@{}p{8.4cm}@{\hspace{0.4cm}}p{8.4cm}@{}}
-1. $7\times 6+80=42+80=\boxed{122}$ & 6. $6\times 14=60+24=\boxed{84}$ \\
-2. $9\times 8+50=72+50=\boxed{122}$ & 7. $13\times 7=70+21=\boxed{91}$ \\
-3. $5\times 10+5\times 7=50+35=85$ & 8. $8{,}6-0{,}03=8{,}60-0{,}03=8{,}57$ \\
-4. $8\times 10+8\times 8=80+64=144$ & 9. $5{,}6-0{,}009=5{,}600-0{,}009=5{,}591$ \\
-5. $9\times 14=90+36=\boxed{126}$ & 10. $7\times 10+7\times 7=70+49=119$ \\
-\end{tabular}
+\begin{enumerate}
+\item $7\times 6+80=42+80=\boxed{122}$
+\item $9\times 8+50=72+50=\boxed{122}$
+\item $5\times 10+5\times 7=50+35=\boxed{85}$
+\item $8\times 10+8\times 8=80+64=\boxed{144}$
+\item $9\times 14=90+36=\boxed{126}$
+\item $6\times 14=60+24=\boxed{84}$
+\item $13\times 7=70+21=\boxed{91}$
+\item $8{,}6-0{,}03=8{,}60-0{,}03=\boxed{8{,}57}$
+\item $5{,}6-0{,}009=5{,}600-0{,}009=\boxed{5{,}591}$
+\item $7\times 10+7\times 7=70+49=\boxed{119}$
+\end{enumerate}
+\newpage
 
 % =============================================================
 \titreversion{Correction du calcul mental --- Version 4/8}
-\begin{tabular}{@{}p{8.4cm}@{\hspace{0.4cm}}p{8.4cm}@{}}
-1. $8\times 9+40=72+40=\boxed{112}$ & 6. $8\times 12=80+16=\boxed{96}$ \\
-2. $7\times 7+80=49+80=\boxed{129}$ & 7. $15\times 4=40+20=\boxed{60}$ \\
-3. $6\times 10+6\times 4=60+24=84$ & 8. $6{,}8-0{,}07=6{,}80-0{,}07=6{,}73$ \\
-4. $5\times 10+5\times 6=50+30=80$ & 9. $7{,}8-0{,}004=7{,}800-0{,}004=7{,}796$ \\
-5. $7\times 16=70+42=\boxed{112}$ & 10. $4\times 10+4\times 4=40+16=56$ \\
-\end{tabular}
-
+\begin{enumerate}
+\item $8\times 9+40=72+40=\boxed{112}$
+\item $7\times 7+80=49+80=\boxed{129}$
+\item $6\times 10+6\times 4=60+24=\boxed{84}$
+\item $5\times 10+5\times 6=50+30=\boxed{80}$
+\item $7\times 16=70+42=\boxed{112}$
+\item $8\times 12=80+16=\boxed{96}$
+\item $15\times 4=40+20=\boxed{60}$
+\item $6{,}8-0{,}07=6{,}80-0{,}07=\boxed{6{,}73}$
+\item $7{,}8-0{,}004=7{,}800-0{,}004=\boxed{7{,}796}$
+\item $4\times 10+4\times 4=40+16=\boxed{56}$
+\end{enumerate}
 \newpage
 
 % =============================================================
 \titreversion{Correction du calcul mental --- Version 5/8}
-\begin{tabular}{@{}p{8.4cm}@{\hspace{0.4cm}}p{8.4cm}@{}}
-1. $6\times 7+90=42+90=\boxed{132}$ & 6. $9\times 16=90+54=\boxed{144}$ \\
-2. $8\times 8+60=64+60=\boxed{124}$ & 7. $17\times 6=60+42=\boxed{102}$ \\
-3. $9\times 10+9\times 6=90+54=144$ & 8. $5{,}4-0{,}09=5{,}40-0{,}09=5{,}31$ \\
-4. $7\times 10+7\times 4=70+28=98$ & 9. $6{,}7-0{,}003=6{,}700-0{,}003=6{,}697$ \\
-5. $6\times 17=60+42=\boxed{102}$ & 10. $8\times 10+8\times 5=80+40=120$ \\
-\end{tabular}
+\begin{enumerate}
+\item $6\times 7+90=42+90=\boxed{132}$
+\item $8\times 8+60=64+60=\boxed{124}$
+\item $9\times 10+9\times 6=90+54=\boxed{144}$
+\item $7\times 10+7\times 4=70+28=\boxed{98}$
+\item $6\times 17=60+42=\boxed{102}$
+\item $9\times 16=90+54=\boxed{144}$
+\item $17\times 6=60+42=\boxed{102}$
+\item $5{,}4-0{,}09=5{,}40-0{,}09=\boxed{5{,}31}$
+\item $6{,}7-0{,}003=6{,}700-0{,}003=\boxed{6{,}697}$
+\item $8\times 10+8\times 5=80+40=\boxed{120}$
+\end{enumerate}
+\newpage
 
 % =============================================================
 \titreversion{Correction du calcul mental --- Version 6/8}
-\begin{tabular}{@{}p{8.4cm}@{\hspace{0.4cm}}p{8.4cm}@{}}
-1. $9\times 6+50=54+50=\boxed{104}$ & 6. $7\times 15=70+35=\boxed{105}$ \\
-2. $6\times 6+90=36+90=\boxed{126}$ & 7. $12\times 8=80+16=\boxed{96}$ \\
-3. $4\times 10+4\times 7=40+28=68$ & 8. $7{,}2-0{,}05=7{,}20-0{,}05=7{,}15$ \\
-4. $6\times 10+6\times 8=60+48=108$ & 9. $8{,}2-0{,}005=8{,}200-0{,}005=8{,}195$ \\
-5. $8\times 15=80+40=\boxed{120}$ & 10. $9\times 10+9\times 8=90+72=162$ \\
-\end{tabular}
+\begin{enumerate}
+\item $9\times 6+50=54+50=\boxed{104}$
+\item $6\times 6+90=36+90=\boxed{126}$
+\item $4\times 10+4\times 7=40+28=\boxed{68}$
+\item $6\times 10+6\times 8=60+48=\boxed{108}$
+\item $8\times 15=80+40=\boxed{120}$
+\item $7\times 15=70+35=\boxed{105}$
+\item $12\times 8=80+16=\boxed{96}$
+\item $7{,}2-0{,}05=7{,}20-0{,}05=\boxed{7{,}15}$
+\item $8{,}2-0{,}005=8{,}200-0{,}005=\boxed{8{,}195}$
+\item $9\times 10+9\times 8=90+72=\boxed{162}$
+\end{enumerate}
+\newpage
 
 % =============================================================
 \titreversion{Correction du calcul mental --- Version 7/8}
-\begin{tabular}{@{}p{8.4cm}@{\hspace{0.4cm}}p{8.4cm}@{}}
-1. $7\times 8+60=56+60=\boxed{116}$ & 6. $8\times 14=80+32=\boxed{112}$ \\
-2. $9\times 9+40=81+40=\boxed{121}$ & 7. $14\times 7=70+28=\boxed{98}$ \\
-3. $8\times 10+8\times 4=80+32=112$ & 8. $8{,}3-0{,}06=8{,}30-0{,}06=8{,}24$ \\
-4. $4\times 10+4\times 5=40+20=60$ & 9. $5{,}3-0{,}008=5{,}300-0{,}008=5{,}292$ \\
-5. $9\times 12=90+18=\boxed{108}$ & 10. $6\times 10+6\times 5=60+30=90$ \\
-\end{tabular}
+\begin{enumerate}
+\item $7\times 8+60=56+60=\boxed{116}$
+\item $9\times 9+40=81+40=\boxed{121}$
+\item $8\times 10+8\times 4=80+32=\boxed{112}$
+\item $4\times 10+4\times 5=40+20=\boxed{60}$
+\item $9\times 12=90+18=\boxed{108}$
+\item $8\times 14=80+32=\boxed{112}$
+\item $14\times 7=70+28=\boxed{98}$
+\item $8{,}3-0{,}06=8{,}30-0{,}06=\boxed{8{,}24}$
+\item $5{,}3-0{,}008=5{,}300-0{,}008=\boxed{5{,}292}$
+\item $6\times 10+6\times 5=60+30=\boxed{90}$
+\end{enumerate}
+\newpage
 
 % =============================================================
 \titreversion{Correction du calcul mental --- Version 8/8}
-\begin{tabular}{@{}p{8.4cm}@{\hspace{0.4cm}}p{8.4cm}@{}}
-1. $8\times 7+40=56+40=\boxed{96}$ & 6. $6\times 16=60+36=\boxed{96}$ \\
-2. $7\times 6+50=42+50=\boxed{92}$ & 7. $16\times 5=50+30=\boxed{80}$ \\
-3. $5\times 10+5\times 5=50+25=75$ & 8. $6{,}6-0{,}08=6{,}60-0{,}08=6{,}52$ \\
-4. $9\times 10+9\times 7=90+63=153$ & 9. $7{,}4-0{,}006=7{,}400-0{,}006=7{,}394$ \\
-5. $7\times 13=70+21=\boxed{91}$ & 10. $7\times 10+7\times 6=70+42=112$ \\
-\end{tabular}
+\begin{enumerate}
+\item $8\times 7+40=56+40=\boxed{96}$
+\item $7\times 6+50=42+50=\boxed{92}$
+\item $5\times 10+5\times 5=50+25=\boxed{75}$
+\item $9\times 10+9\times 7=90+63=\boxed{153}$
+\item $7\times 13=70+21=\boxed{91}$
+\item $6\times 16=60+36=\boxed{96}$
+\item $16\times 5=50+30=\boxed{80}$
+\item $6{,}6-0{,}08=6{,}60-0{,}08=\boxed{6{,}52}$
+\item $7{,}4-0{,}006=7{,}400-0{,}006=\boxed{7{,}394}$
+\item $7\times 10+7\times 6=70+42=\boxed{112}$
+\end{enumerate}
 
 \end{document}
